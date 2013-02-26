@@ -1,0 +1,29 @@
+﻿{
+  "name": "TwitBitPipe.js",
+  "description": "Twitter to RabbitMQ Pipe",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tongr/TwitBitPipe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tongr/TwitBitPipe.git"
+  },
+  "main": "lib/pipe",
+  "directories": {
+    "lib": "lib"
+  },
+  "maintainers": {
+    "name": "tongr"
+  },
+  "licenses": {
+    "type": "Apache License 2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  },
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {
+    "amqp": "0.1.4",
+    "ntwitter": "0.5.0"
+  },
+  "devDependencies": {}
+}

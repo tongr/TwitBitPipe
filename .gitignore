@@ -1,0 +1,5 @@
+# ignore private files,
+*.private.*
+
+# ignore node module structure
+node_modules
