@@ -1,12 +1,15 @@
 ﻿var 
   twitterCredentials = require('./twitter.credentials.private'),
   rabbitSettings = require('./rabbitmq.config.private'),
-  Pipe = require('./lib/pipe');
+  fileConfig = require('./fileSink.config'),
+  Source = require('./lib/twitterPipe'),
+//RabbitSink = require('./lib/rabbitSink'),
+  FileSink = require('./lib/fileSink');
 
-var pipeInstance = new Pipe(twitterCredentials, rabbitSettings);
+var pipeInstance = new Source(twitterCredentials);
+var fileOut = new FileSink(fileConfig);
 
-// filter all tweets containing links and pipe it to the linkTweets exchange
-pipeInstance.filter(
-  'statuses/filter', 
-  { 'track' : ['http'] }, 
-  'linkTweets');
+pipeInstance.add(fileOut);
+
+// filter all tweets containing links and pipe it to the previously defined file sink
+pipeInstance.init('statuses/filter', { 'track' : ['http'] });
