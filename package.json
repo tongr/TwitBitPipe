@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/tongr/TwitBitPipe.git"
   },
-  "main": "lib/pipe",
+  "main": "run",
   "directories": {
     "lib": "lib"
   },
