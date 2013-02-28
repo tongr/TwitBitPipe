@@ -1,11 +1,11 @@
 ﻿#!/bin/sh
 
 echo '========================================'
-echo 'Insalling missing node modules ...'
+echo 'Installing missing node modules ...'
 echo '========================================'
-CALL npm install amqp
+npm install amqp
 echo '----------------------------------------'
-CALL npm install ntwitter
+npm install ntwitter
 
 echo '========================================'
 echo 'Configuring ...'

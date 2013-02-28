@@ -2,7 +2,7 @@
 SETLOCAL
 
 ECHO ========================================
-ECHO Insalling missing node modules ...
+ECHO Installing missing node modules ...
 ECHO ========================================
 CALL npm install amqp
 ECHO ----------------------------------------
