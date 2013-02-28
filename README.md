@@ -21,7 +21,7 @@ By using the fanout exchange on RabbitMQ it allows to have multiple consumers at
 * RabbitMQ server - http://www.rabbitmq.com/
 * Twitter Streaming API access - https://dev.twitter.com/
 * Optional:
-    * **incompatible to Windows**: Node.js pluging forever-monitor to run the runForever.js script  - https://github.com/nodejitsu/forever-monitor (run: npm forever-monitor -g)
+    * **incompatible to Windows**: Node.js pluging forever-monitor to run the runForever.js script  - https://github.com/nodejitsu/forever-monitor (run: npm install forever-monitor -g)
 
 ## How to
 1. install dependencies (ntwitter/node-amqp/...)
