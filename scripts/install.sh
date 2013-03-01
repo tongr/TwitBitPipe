@@ -1,5 +1,9 @@
-﻿#!/bin/sh
+﻿#!/bin/bash
 
+current_dir=$(pwd)
+module_dir=$(dirname $0)/..
+
+cd $module_dir
 echo '========================================'
 echo 'Installing missing node modules ...'
 echo '========================================'
@@ -36,3 +40,5 @@ done
 echo '========================================'
 echo 'Installation finished!'
 echo '========================================'
+
+cd $current_dir
