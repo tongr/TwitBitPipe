@@ -3,3 +3,6 @@
 
 # ignore node module structure
 node_modules
+
+# ignore forever status output
+forever.*
