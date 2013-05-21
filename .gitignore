@@ -4,5 +4,8 @@
 # ignore node module structure
 node_modules
 
+# ignore tweets
+tweets/
+
 # ignore forever status output
 forever.*
