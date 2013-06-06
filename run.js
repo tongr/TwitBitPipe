@@ -7,9 +7,11 @@
   FileSink = require('./lib/fileSink');
 
 var pipeInstance = new Source(twitterCredentials);
+var filter = { 'lang' : [ undefined, 'en' ] }
 
 // add file pipe
 var fileOut = new FileSink(fileConfig);
+fileOut.setFilter(filter);
 pipeInstance.add(fileOut);
 
 
@@ -18,6 +20,7 @@ pipeInstance.init('statuses/filter', { 'track' : ['http'] });
 /*/
 //add rabbit sink
 var rabbitOut = new RabbitSink(rabbitSettings);
+rabbitOut.setFilter(filter);
 pipeInstance.add(rabbitOut);
 
 // init the rabbit connection ..
